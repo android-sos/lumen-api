@@ -18,7 +18,7 @@ $app->get('/', function () use ($app) {
 $api = app('Dingo\Api\Routing\Router');
 
 
-$api->version('v1', ['middleware' => 'api.throttle', 'limit' => 100, 'expires' => 5, 'namespace' => 'App\Http\Controllers\Api\V1'], function ($api) {
+$api->version('v1', ['middleware' => ['api.throttle'] , 'limit' => 100, 'expires' => 5, 'namespace' => 'App\Http\Controllers\Api\V1'], function ($api) {
 
     $api->post('auth/login', [
         'as'   => 'auth.login',
