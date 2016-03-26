@@ -3,7 +3,7 @@
 namespace App\Transformers;
 
 use League\Fractal\TransformerAbstract;
-use App\Models\User;
+use App\User;
 
 class UserTransformer extends TransformerAbstract
 {
